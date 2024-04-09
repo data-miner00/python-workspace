@@ -15,3 +15,10 @@ lab:
 
 typo:
     codespell -w
+
+lint:
+    ruff check .
+
+format:
+    black .
+    isort .

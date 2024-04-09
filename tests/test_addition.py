@@ -1,5 +1,6 @@
-from work import addition
 import pytest
+
+from work import addition
 
 
 @pytest.mark.parametrize(
