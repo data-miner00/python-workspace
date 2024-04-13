@@ -9,6 +9,13 @@ repos:
       - id: debug-statements
   - repo: local
     hooks:
+      - id: isort
+        name: Sort imports
+        entry: isort
+        args: ["."]
+        language: system
+        types:
+          - python
       - id: black
         name: Format codes
         entry: black
