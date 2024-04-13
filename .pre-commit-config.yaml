@@ -16,3 +16,8 @@ repos:
         language: system
         types:
           - python
+      - id: codespell
+        name: Fix typos
+        args: [-w]
+        entry: codespell
+        language: system
