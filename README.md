@@ -24,6 +24,16 @@ To execute these command line features, we'll need to activate the environment t
 poetry shell
 ```
 
+### Execute Codes
+
+The code within the `src/work` can be execute easily with the Python command.
+
+```
+python src/work
+```
+
+This is possible because of the `__main__.py` file, which serves as the entry point for the executable scripts.
+
 ### Jupyter Notebook
 
 Run interactive session for Python with Jupyter Notebook.
@@ -62,7 +72,7 @@ ruff check .
 
 ### Formatting
 
-Automated formattings of the codes to improve readability can be done by using Black.
+Automated formatting of the codes to improve readability can be done by using Black.
 
 ```
 black .
