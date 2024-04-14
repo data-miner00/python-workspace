@@ -84,6 +84,22 @@ Automated formatting of the codes to improve readability can be done by using Bl
 black .
 ```
 
+## Enforce Rules (Optional)
+
+To ensure that the codebase is clean and free of trivial issues such as extra space or overlooked typos, the rules can be enforced before every commit to examine the codebase. `pre-commit` can be installed from Pip and it's included in Nix.
+
+```
+pip install pre-commit
+```
+
+After that, install the hooks by running
+
+```
+pre-commit install
+```
+
+It should now run the checks listed in `.pre-commit-config.yaml` file upon each attempted commit.
+
 ## Useful Links
 
 - [Poetry Docs](https://python-poetry.org/docs/cli/)
