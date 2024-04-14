@@ -4,7 +4,13 @@ A personal workspace to deal with data quickly, inspired by my colleague.
 
 ## Installation
 
-Poetry is required to manage the virtual environment and packages. If Poetry is not installed globally on your system, run the following Pip install command.
+For Nix users, initiate the Nix shell by running the `develop` command. This step is optional.
+
+```
+nix develop
+```
+
+Poetry is required to manage the virtual environment and packages. If Poetry is not installed globally on your system, run the following Pip install command. Nix users can skip this step as the dependency is already installed.
 
 ```
 pip install poetry
