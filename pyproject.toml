@@ -13,6 +13,7 @@ numpy = "^1.26.4"
 pandas = "^2.2.1"
 notebook = "^7.1.2"
 matplotlib = "^3.8.4"
+parsel = "^1.9.1"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.1.1"
