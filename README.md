@@ -50,6 +50,14 @@ jupyter notebook --notebook-dir="notebooks"
 
 This will automatically open the Jupyter Notebook UI in the browser with the url `localhost:8888`.
 
+### Marimo
+
+Run interactive session for Python with Marimo.
+
+```
+marimo edit notebooks/marimo.py
+```
+
 ### Pytest
 
 Unit tests are located at the `tests` folder. Pytest will be able to execute the tests correctly.
@@ -109,6 +117,7 @@ It should now run the checks listed in `.pre-commit-config.yaml` file upon each 
 ## Useful Links
 
 - [uv](https://docs.astral.sh/uv/)
+- [Marimo Docs](https://docs.marimo.io/)
 - [Poetry Docs](https://python-poetry.org/docs/cli/)
 - [Jupyter Docs](https://docs.jupyter.org/en/latest/)
 - [Ruff Configuration](https://docs.astral.sh/ruff/configuration/)
