@@ -10,16 +10,16 @@ For Nix users, initiate the Nix shell by running the `develop` command. This ste
 nix develop
 ```
 
-Poetry is required to manage the virtual environment and packages. If Poetry is not installed globally on your system, run the following Pip install command. Nix users can skip this step as the dependency is already installed.
+Non-nix users are required to have UV preinstalled.
 
 ```
-pip install poetry
+uv --version
 ```
 
 After that, install and create a virtual environment for the project workspace.
 
 ```
-poetry install
+uv pip install -r pyproject.toml
 ```
 
 ## Features
@@ -27,7 +27,7 @@ poetry install
 To execute these command line features, we'll need to activate the environment to our current command line.
 
 ```
-poetry shell
+source .venv/bin/activate
 ```
 
 ### Execute Codes
@@ -84,7 +84,13 @@ Automated formatting of the codes to improve readability can be done by using Bl
 black .
 ```
 
-## Enforce Rules (Optional)
+isort is used to sort imports alphabetically and separate to sections automatically.
+
+```
+isort .
+```
+
+## Enforce Rules (Not Recommended)
 
 To ensure that the codebase is clean and free of trivial issues such as extra space or overlooked typos, the rules can be enforced before every commit to examine the codebase. `pre-commit` can be installed from Pip and it's included in Nix.
 
@@ -102,7 +108,9 @@ It should now run the checks listed in `.pre-commit-config.yaml` file upon each 
 
 ## Useful Links
 
+- [uv](https://docs.astral.sh/uv/)
 - [Poetry Docs](https://python-poetry.org/docs/cli/)
 - [Jupyter Docs](https://docs.jupyter.org/en/latest/)
 - [Ruff Configuration](https://docs.astral.sh/ruff/configuration/)
 - [Codespell GitHub](https://github.com/codespell-project/codespell)
+- [isort](https://pycqa.github.io/isort/)

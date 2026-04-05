@@ -15,14 +15,14 @@
       pkgs.mkShell
         {
           buildInputs = [
-            pkgs.just
-            pkgs.python3
-            pkgs.poetry
+            pkgs.uv
             pkgs.pre-commit
           ];
 
           shellHook = ''
             echo "Activated Nix Shell"
+            uv --version
+            uvx --version
           '';
         };
   };

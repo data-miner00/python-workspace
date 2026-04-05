@@ -1,30 +1,42 @@
-[tool.poetry]
+[project]
 name = "python-workspace"
 version = "0.1.0"
 description = "A batteries-included high-efficiency quick-and-dirty Python workbench."
-authors = ["data-miner00 <data-miner00@users.noreply.github.com>"]
-license = "WTFPL"
+authors = [{ name = "data-miner00", email = "data-miner00@users.noreply.github.com" }]
+requires-python = ">=3.14,<4"
 readme = "README.md"
+license = "WTFPL"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.14",
+]
+dependencies = [
+    "requests>=2.31.0,<3",
+    "numpy>=2.4.4,<3",
+    "pandas>=3.0.2,<4",
+    "notebook>=7.1.2,<8",
+    "matplotlib>=3.8.4,<4",
+    "parsel>=1.9.1,<2",
+]
 
-[tool.poetry.dependencies]
-python = "^3.10"
-requests = "^2.31.0"
-numpy = "^1.26.4"
-pandas = "^2.2.1"
-notebook = "^7.1.2"
-matplotlib = "^3.8.4"
-parsel = "^1.9.1"
+[dependency-groups]
+dev = [
+    "pytest>=8.1.1,<9",
+    "ruff>=0.3.5,<0.4",
+    "black>=24.3.0,<25",
+    "codespell>=2.2.6,<3",
+    "isort>=5.13.2,<6",
+]
 
-[tool.poetry.group.dev.dependencies]
-pytest = "^8.1.1"
-ruff = "^0.3.5"
-black = "^24.3.0"
-codespell = "^2.2.6"
-isort = "^5.13.2"
+[tool.uv]
+default-groups = "all"
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["uv_build>=0.11.2,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "work"
 
 [tool.pytest.ini_options]
 pythonpath = [
